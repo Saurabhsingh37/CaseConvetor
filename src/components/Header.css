@@ -1,0 +1,88 @@
+/* ===== NAVBAR GRADIENT ===== */
+.custom-navbar {
+  background: linear-gradient(45deg, #141e30, #243b55) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  padding: 15px 25px;
+}
+
+/* ===== BRAND TEXT ===== */
+.navbar-brand {
+  color: white !important;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+  color: white !important;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #00ffd5 !important;
+}
+
+/* ===== SEARCH BUTTON ===== */
+.btn-search {
+  border: 1px solid #00ffd5;
+  color: #00ffd5;
+}
+
+.btn-search:hover {
+  background: #00ffd5;
+  color: black;
+}
+
+/* ===== SEARCH INPUT ===== */
+.form-control {
+  border-radius: 20px;
+}
+
+/* ===== Animated Gradient Navbar ===== */
+
+.animated-navbar {
+  background: linear-gradient(
+    270deg,
+    #ff00cc,
+    #3333ff,
+    #00ffd5,
+    #ff6600
+  );
+
+  background-size: 800% 800%;
+
+  animation: gradientMove 15s ease infinite;
+
+  padding: 15px 25px;
+
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+}
+
+/* ===== Animation ===== */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== Nav Links ===== */
+.nav-link {
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Brand ===== */
+.navbar-brand {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
