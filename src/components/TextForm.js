@@ -4,26 +4,22 @@ export default function TextForm(props) {
 
   const [text, setText] = useState('Enter your text here');
 
-  // Convert to Uppercase
   const handleUpClick = () => {
-    let newText = text.toUpperCase();
-    setText(newText);
+    setText(text.toUpperCase());
   }
 
-  // Convert to Lowercase
   const handleLowClick = () => {
-    let newText = text.toLowerCase();
-    setText(newText);
+    setText(text.toLowerCase());
   }
 
-  // Handle textbox change (FIXED)
   const handleOnChange = (event) => {
     setText(event.target.value);
   }
 
   return (
-    <div>
-      <h1>{props.heading}</h1>
+    <div className="container">
+
+      <h1 className="text-center text-md-start">{props.heading}</h1>
 
       <div className="mb-3">
         <textarea
@@ -32,17 +28,31 @@ export default function TextForm(props) {
           onChange={handleOnChange}
           id="myBox"
           rows="8"
-        //   placeholder="Enter your text here"
         ></textarea>
       </div>
 
-      <button className="btn btn-primary mx-2" onClick={handleUpClick}>
-        Convert to Uppercase
-      </button>
+      {/* Responsive Button Container */}
+      <div className="row g-2">
 
-      <button className="btn btn-success" onClick={handleLowClick}>
-        Convert to Lowercase
-      </button>
+        <div className="col-12 col-md-auto">
+          <button 
+            className="btn btn-primary w-100"
+            onClick={handleUpClick}
+          >
+            Convert to Uppercase
+          </button>
+        </div>
+
+        <div className="col-12 col-md-auto">
+          <button 
+            className="btn btn-success w-100"
+            onClick={handleLowClick}
+          >
+            Convert to Lowercase
+          </button>
+        </div>
+
+      </div>
 
     </div>
   )
